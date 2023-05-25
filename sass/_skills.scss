@@ -1,0 +1,115 @@
+.skills {
+  grid-column: center-start / center-end;
+  grid-row: 4 / 5;
+  margin: 6rem 0;
+
+  @media (max-width: 500px) {
+    margin: 4rem 0;
+  }
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: min-content;
+  gap: 1.5rem;
+  font-family: $font-primary;
+  font-size: $p-font;
+
+  @media (max-width: 998px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 8%;
+  }
+
+  &-main {
+    display: grid;
+    place-items: center;
+
+    .heading {
+      color: rgb(93, 122, 219);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .sub-heading {
+      font-family: $font-display;
+      font-size: 1.6rem;
+      color: #000;
+    }
+  }
+
+  &-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 550px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, min-content);
+    }
+
+    & > div {
+      background-color: rgb(227, 228, 208);
+      padding: 1rem;
+      transition: box-shadow 0.3s;
+      border: 1px solid #ccc;
+
+      i {
+        margin-bottom: 0.8rem;
+      }
+
+      .heading {
+        font-weight: 600;
+        font-size: 0.96rem;
+        font-family: $font-display;
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    & > div:hover {
+      background-color: $main-color;
+      box-shadow: 5px 5px 5px rgba(91, 92, 163, 0.2);
+    }
+  }
+}
+
+.skill-gallery {
+  margin: 4rem 15% 0 15%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media (max-width: 500px) {
+    margin: 4rem 6% 0 6%;
+  }
+
+  & > div {
+    border: 1px solid #4163ac;
+    border-radius: 50%;
+    padding: 0.8rem;
+    transition: all 0.3s ease-in-out;
+
+    i {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      color: #4163ac;
+
+      @media (max-width: 500px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  & > div:hover {
+    background-color: #405c94;
+
+    i {
+      color: white;
+    }
+  }
+}
